@@ -7,3 +7,10 @@
 <br><br>
 
 <%= link_to "Back to movies", movies_path %>
+<% @movie.actors.each do |role| %>
+
+<li>
+<%= role.name %>
+
+</li>
+<% end %>

@@ -1,0 +1,15 @@
+<h1>actors</h1>
+
+<ul>
+  <% @actors.each do |actor| %>
+  <li><%= link_to "#{actor.name}", actor %>
+  <%= link_to "edit", edit_actor_path(actor) %>
+  <%= link_to "delete", actor, method: :delete %>
+  </li>
+
+  <% end %>
+</ul>
+
+<%= link_to "Add actor", new_actor_path %>
+
+

@@ -1,0 +1,12 @@
+<h1>Actors#show</h1>
+<%= @actor.name %>
+<%= link_to "Edit", edit_actor_path(@actor) %>
+<%= button_to "Delete", actor_path(@actor), :method => :delete %>
+
+<%= link_to "Back to actors", actors_path %>
+<% @actor.movies.each do |role| %>
+<li>
+<%= role.title %>
+<%= role.year %>
+</li>
+<% end %>
